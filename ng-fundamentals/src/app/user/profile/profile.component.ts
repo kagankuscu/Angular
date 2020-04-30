@@ -19,7 +19,7 @@ export class ProfileComponent implements OnInit {
   ngOnInit() {
     this.firstName = new FormControl(
       this.authService.currenytUser.firstName,
-      Validators.required
+      [Validators.required, Validators.pattern('[a-zA-Z].*')]
     );
     this.lastName = new FormControl(
       this.authService.currenytUser.lastName,
@@ -45,7 +45,7 @@ export class ProfileComponent implements OnInit {
   }
 
   validateFirstName() {
-    return !this.firstName.valid || this.firstName.untouched
+    return this.firstName.valid || this.firstName.untouched
   }
   validateLastName() {
     return this.lastName.valid || this.lastName.untouched

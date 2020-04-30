@@ -11,10 +11,11 @@
       <div
         class="form-group"
         [ngClass]="{
-          'error': validateFirstName()}"
+          'error': !validateFirstName()}"
       >
         <label for="firstName">First Name:</label>
-        <em *ngIf="!validateFirstName()">Required</em>
+        <em *ngIf="!validateFirstName() && profileForm.controls.firstName.errors.required">Required</em>
+        <em *ngIf="!validateFirstName() && profileForm.controls.firstName.errors.pattern">Must start with a letter</em>
         <input
           formControlName="firstName"
           id="firstName"
@@ -29,7 +30,7 @@
           'error': !validateLastName()}"
       >
         <label for="lastName">Last Name:</label>
-        <em *ngIf="!validateLastName()">Required</em>
+        <em *ngIf="!validateLastName() && profileForm.controls.firstName.errors.required">Required</em>
         <input
           formControlName="lastName"
           id="lastName"
