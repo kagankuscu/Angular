@@ -4,8 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { EventsAppComponent } from './events-app.component';
 import { EventsListComponent } from './events/events-list.component';
-import { EventThumbnailComponent } from './events/events-thumbnail.componen';
+import { EventThumbnailComponent } from './events/events-thumbnail.component';
 import { NavBarComponent } from './nav/navbar.component';
+import { EventDetailsComponent } from './events/event-details/event-details.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { NavBarComponent } from './nav/navbar.component';
     EventsAppComponent,
     EventsListComponent,
     EventThumbnailComponent,
-    NavBarComponent
+    NavBarComponent,
+    EventDetailsComponent
   ],
   providers: [],
   bootstrap: [EventsAppComponent]
