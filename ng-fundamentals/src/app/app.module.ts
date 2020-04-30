@@ -5,6 +5,7 @@ import {
   EventsListComponent,
   EventThumbnailComponent,
   EventDetailsComponent,
+  CreateSessionComponent
 } from "./events/index";
 
 import { EventsAppComponent } from "./events-app.component";
@@ -25,6 +26,7 @@ import { FormsModule } from "@angular/forms";
     EventDetailsComponent,
     CreateEventComponent,
     Error404Component,
+    CreateSessionComponent,
   ],
   providers: [
     {
