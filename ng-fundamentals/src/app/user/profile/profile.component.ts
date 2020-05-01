@@ -1,13 +1,13 @@
-import { Component, OnInit, Inject } from "@angular/core";
-import { FormControl, FormGroup, Validators } from "@angular/forms";
-import { AuthService } from "../auth.service";
-import { Router } from "@angular/router";
+import { Component, OnInit, Inject } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router';
 import { Toastr, TOASTR_TOKEN } from 'src/app/common/toastr.service';
 
 @Component({
-  selector: "app-profile",
-  templateUrl: "./profile.component.html",
-  styleUrls: ["./profile.component.css"],
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent implements OnInit {
   private firstName: FormControl;
@@ -44,7 +44,7 @@ export class ProfileComponent implements OnInit {
     }
   }
   cancel() {
-    this.router.navigate(["/events"]);
+    this.router.navigate(['/events']);
   }
 
   validateFirstName() {
